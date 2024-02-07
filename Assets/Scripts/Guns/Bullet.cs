@@ -31,6 +31,11 @@ public class Bullet : MonoBehaviour
          {
             hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage,recilling);
          }
+
+         if (hitInfo.collider.CompareTag("Boss"))
+         {
+            hitInfo.collider.GetComponent<BossEnemy>().TakeDamageBoss(damage);
+         }
          Destroy(gameObject);
          Instantiate(effect, transform.position, Quaternion.identity);
       }

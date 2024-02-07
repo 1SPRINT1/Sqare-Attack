@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [Header("Для того чтобы задать силу")]
+    [Header("To jump")]
     [SerializeField] private float _jumpForce;
     [SerializeField] private Rigidbody2D rb2d;
     [Space(15)]
-    [Header("Проверка на прыжок")]
+    [Header("To check the jump")]
     private bool _isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask maskGround;
-    [Header("Поиск Game Manager")]
+    [Header("Search Game Manager")]
     [SerializeField] private GameManager GM;
 
     private void Start()
